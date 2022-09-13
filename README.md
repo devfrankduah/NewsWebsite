@@ -2,7 +2,8 @@
 # Built with HTML, CSS and JavaScript
 # Below is aws link to which it was hosted
 # http://newssitesyncline.s3-website.eu-west-3.amazonaws.com
-# For testing purposes, clone and run in VS Code with Live Server
+# For testing purposes, clone and run in VS Code with Live Server 
+# To install live server extension in Vs Code, follow https://www.freecodecamp.org/news/vscode-live-server-auto-refresh-browser/
 # ScreenShots
 
 ![alt text](images/Screenshot%20(97).png)
