@@ -15,13 +15,13 @@ var newsDataArr = [];
 
 // apis 
 const API_KEY = "88bfa29094dd4109a261d0d85b3f425b";
-const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=88bfa29094dd4109a261d0d85b3f425b";
-const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=88bfa29094dd4109a261d0d85b3f425b";
-const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=88bfa29094dd4109a261d0d85b3f425b";
-const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=88bfa29094dd4109a261d0d85b3f425b";
-const ENTERTAINMENT_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=88bfa29094dd4109a261d0d85b3f425b";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=8&apiKey=88bfa29094dd4109a261d0d85b3f425b";
-const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=apple&from=2022-09-11&to=2022-09-11&sortBy=popularity&apiKey=88bfa29094dd4109a261d0d85b3f425b";
+const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=";
+const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=";
+const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=";
+const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=";
+const ENTERTAINMENT_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=8&apiKey=";
+const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 
 window.onload = function () {
     newsType.innerHTML = "<h4>Headlines</h4>";
@@ -162,7 +162,7 @@ const fetchQueryNews = async () => {
     if (newsQuery.value == null)
         return;
 
-    const response = await fetch(SEARCH_NEWS + encodeURIComponent(newsQuery.value) + "&apiKey=88bfa29094dd4109a261d0d85b3f425b" + API_KEY);
+    const response = await fetch(SEARCH_NEWS + encodeURIComponent(newsQuery.value) + "&apiKey=" + API_KEY);
     newsDataArr = [];
     if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
